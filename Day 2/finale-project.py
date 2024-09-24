@@ -1,4 +1,4 @@
-# " Welcome to the Tip Calculator!"
+# Welcome to the Tip Calculator!
 print("\nWelcome to the Tip Calculator!")
 
 bill = float(input("What is the total bill? N"))
