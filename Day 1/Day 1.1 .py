@@ -1,4 +1,4 @@
-# Python Print Function
+# Python Print Function using diffrent approach
 print("""
       Day 1 - Python Print Function
       
@@ -7,4 +7,5 @@ print("""
       print("what to print)
       """)
 print("Day 1 - Python Print function\nThe Function is declared like this:\nprint('what to print')")
+
 print("Hello" + " Angela")
