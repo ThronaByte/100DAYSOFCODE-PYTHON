@@ -1,14 +1,14 @@
 # Leap year Excercise
 year = int(input("which year do you wnat to check: "))
 
-
 if year % 4 == 0:
     if year % 100 == 0:
         if year % 400 == 0:
-            print('leap year')
+            print('it a leap year')
         else:
-            print('not leap')
+            print('not a leap year')
     else:
-        print('leap year')
+       print('it a leap yea') 
 else:
-    print('not leap')    
+    print('not a leap')
+    

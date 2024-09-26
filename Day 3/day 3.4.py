@@ -1,25 +1,31 @@
-# Welcome to the rollercoaster game
+# Python Pizza
+print("Welcome to Python pizza deliveries")
+size = input('what size do you want? S for small, L for large, M for medium: ').lower()
+add_pepperoni = input('Do you want pepperoni? Y or N ? ').lower()
+extra_cheese = input('Do you want extra cheese? Y or N ? ').lower()
 
-print('\nWelcome to the rollercoaster game')
-height = int(input('What is your height? '))
-
-bill = 0
-if height > 120:
-    age = int(input('How old are you? '))
-    if age < 12:
-        bill = 5
-        print('Child tickets are N5')
-    elif age <= 18:
-        bill = 7
-        print('Youth tickets are N7')
-    else:
-        bill = 12
-        print('Adult tickets are N12')
+money = 0
+if size == 's':
+    money +=15
+    if add_pepperoni == 'y':
+            money += 2
+    if extra_cheese == 'y':
+        money += 1
         
-        # adding bill for photo
-    photo = input('Do you want a photo taken? Y or N? ').lower()
-    if photo == 'y':
-        bill += 5
-        print(f'Your bill is N{bill}')
+elif size == 'm':
+    money += 20
+    if add_pepperoni == 'y':
+            money +=3
+    if extra_cheese == 'y':
+        money += 1
+        
+elif size == 'l':
+    money += 25
+    if add_pepperoni == 'y':
+            money +=3
+    if extra_cheese == 'y':
+        money += 1
 else:
-    print('No! you have to grow taller')
+    print("Invaid input")
+            
+print(f"Your total bill is: {money}")
