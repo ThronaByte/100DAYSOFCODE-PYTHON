@@ -19,12 +19,13 @@ for pl in range(1, ur_number + 1):
     pass_list.append(random.choice(numbers))
 for pl in range(1, ur_alphabet +1):
     pass_list.append(random.choice(alphabets))
-
+    
+# print(pass_list)
 random.shuffle(pass_list)
 
 pass_word = ''
 for pw in pass_list:
     pass_word += str(pw)
-print(pass_word)
 
-print(f"Your password is: {pass_word}")
+# print(password)
+print(f"Here is your password: {pass_word}")
