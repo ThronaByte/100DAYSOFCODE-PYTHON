@@ -9,11 +9,9 @@ def caesar(text, shift,direct):
     for letter in text:
         position = alphabet.index(letter)
         if direct == "encode":
-            # shift *= 1
             encrypt_position = position + shift
             cipher_text += alphabet[encrypt_position]
         elif direct == "decode":
-            # shift *= -1
             decrypt_position = position - shift
             cipher_text += alphabet[decrypt_position]
     print(f"The {direct} text is: {cipher_text}")
