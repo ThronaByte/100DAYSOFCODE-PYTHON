@@ -62,11 +62,14 @@ def calculation():
         answer = calculator(num1,num2)
         print(f"{num1} {opr_symbol} {num2} = {answer}")
         
-        cont = input(f"Type 'y' to continue calculating with {answer}, or 'n' to start a new program.: ").lower()
+        cont = input(f"Type 'y' to continue calculating with {answer}, or 'n' to start a new program, z to exit.: ").lower()
         if cont == 'y':
             num1 = answer
         elif cont == 'n':
             clear()
             calculation()
             ask = False
+        else:
+            print("Exiting the calculator")
+            break
 calculation()
