@@ -1,4 +1,4 @@
-print("Hello coffee Machine")
+print("Welcome To ThronaByte Coffee Machine")
 # #1
 from coffe_machine_menu import resources, MENU
 
@@ -29,7 +29,7 @@ def transaction_successful(money_received, flavour_cost):
     """Determines if the user has inserted enough money and returns either True or False."""
     if money_received >= flavour_cost:
         change = round(money_received - flavour_cost, 2)
-        print(f"Here is your N{change} change")
+        print(f"Here is your change: N{change} ")
         global profit
         profit += flavour_cost
         return  True
@@ -42,7 +42,7 @@ def make_coffee(flavour_name, ingredients):
     """Prepares the coffee if the transaction is successful."""
     for item in ingredients:
         resources[item] -= ingredients[item]
-    print(f"Here is your {flavour_name}☕🥛. Enjoy")
+    print(f"Here is your ({flavour_name}☕🥛). Enjoy...")
 
 def coffee_machine():
     """Integrates all the logic together for smooth operation."""
@@ -50,8 +50,12 @@ def coffee_machine():
     while is_off:
         user = input("what would you like? (latte/espresso/cappuccino): ").lower()
         # # 2
+        while user not in ["latte", "espresso", "cappuccino", "report", "off"]:
+            user = input("Invalid Input! \nwhat would you like? (latte/espresso/cappuccino): ").lower()
+
         # TODO: Turn off the machine by entering "off" to the prompt. (my code should execute when this happens)
         if user == "off":
+            print("Coffee First, Your Bullshit Second\nGoodBye...👋☕")
             is_off = False
         # 1 print report
         elif user == "report":
