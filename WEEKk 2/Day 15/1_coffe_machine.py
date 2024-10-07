@@ -23,7 +23,7 @@ def process_coins():
     total += int(input("how many nickel? ")) * 0.05
     total += int(input("how many penny? ")) * 0.01
     return  total
- profit = 0
+profit = 0
 def transaction_successful(money_received, flavour_cost):
     # 4 check transaction successful
     """Determines if the user has inserted enough money and returns either True or False."""
