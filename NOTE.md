@@ -12,3 +12,7 @@ an attribute is a variable that assocated with an object
 attributes are the things that the object wil have. 
 Methods are the things that the object does.
 When a function is attached to an object is called a method
+
+
+x_axis = horizontal (+0(positive) & -0(negative))
+y_axis = vertical (+0(positive) & -0(negative))
