@@ -131,5 +131,4 @@ search_button.grid(row=1, column=2, columnspan=2)
 clear_button = Button(text='Clear', command=clear_info)
 clear_button.grid(row=1,column=3, columnspan=2)
 
-
 window.mainloop()
