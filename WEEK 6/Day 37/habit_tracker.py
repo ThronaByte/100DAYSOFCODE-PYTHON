@@ -2,9 +2,8 @@ import requests
 from datetime import datetime
 
 PIXELA_ENDPOINT = "https://pixe.la/v1/users"
-USERNAME = "thronabyte"
-TOKEN = "jn239jd23d2udn2"
-GRAPH_ID = "sex"
+USERNAME = "your_pixela_username"
+TOKEN = "your_pixela_token"
 
 PIXEL_PARAMS = {
     "token": TOKEN,
@@ -12,8 +11,8 @@ PIXEL_PARAMS = {
     "agreeTermsOfService": "yes",
     "notMinor":"yes"
 }
-# pixel = requests.post(url=PIXELA_ENDPOINT, json=PIXEL_PARAMS)
-# print(pixel.text)
+pixel = requests.post(url=PIXELA_ENDPOINT, json=PIXEL_PARAMS)
+print(pixel.text)
 
 HEADER = {
     "X-USER-TOKEN": TOKEN
@@ -34,28 +33,32 @@ while cont:
     today = datetime.now().strftime("%Y%m%d")
 
     if choice == "2":
-        quantity = input("Entry Name? ")
+        quantity = input("enter Entry quantity: ")
+        graph_id = input("Enter graph ID: ")
         post_config = {
             "date": today,
             "quantity": quantity
         }
-        post_endpoint = f"{PIXELA_ENDPOINT}/{USERNAME}/graphs/{GRAPH_ID}"
+        post_endpoint = f"{PIXELA_ENDPOINT}/{USERNAME}/graphs/{graph_id}"
         post = requests.post(url=post_endpoint, json=post_config, headers=HEADER)
         print(post.text)
 
     elif choice == "3":
         date_to_edit = input("Enter the date you want to edit (YYYYMMDD): ")
+        graph_id = input("Enter graph ID: ")
         quantity = input("How much needs to be edited? ")
         put_config = {
             "quantity": quantity
         }
-        put_endpoint = f"{PIXELA_ENDPOINT}/{USERNAME}/graphs/{GRAPH_ID}/{date_to_edit}"
+        put_endpoint = f"{PIXELA_ENDPOINT}/{USERNAME}/graphs/{graph_id}/{date_to_edit}"
         put = requests.put(url=put_endpoint, json=put_config, headers=HEADER)
         print(put.text)
 
     elif choice == "4":
         date_to_delete = input("Enter the date you want to delete (YYYYMMDD): ")
-        delete_endpoint = f"{PIXELA_ENDPOINT}/{USERNAME}/graphs/{GRAPH_ID}/{date_to_delete}"
+        graph_id = input("Enter the graph id to be deleted: ")
+
+        delete_endpoint = f"{PIXELA_ENDPOINT}/{USERNAME}/graphs/{graph_id}/{date_to_delete}"
         delete = requests.delete(url=delete_endpoint, headers=HEADER)
         print(delete.text)
 
