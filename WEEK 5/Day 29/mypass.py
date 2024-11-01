@@ -46,7 +46,7 @@ def save():
                                                            f"\nPassword: {mypass_name}")
 
         if is_correct:
-            with open("data.txt", "a") as data:
+            with open(".env", "a") as data:
                 data.write(f"{website_name} | {email_name}  |{mypass_name} \n")
                 website.delete(0, END)
                 mypass.delete(0, END)
