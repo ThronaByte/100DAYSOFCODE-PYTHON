@@ -15,7 +15,7 @@ PROMISED_UP = 10
 CHROME_DRIVER_PATH = 'C:/Development/chrome-win32/chromedriver-win32/chromedriver.exe'
 TWITTER_EMAIL = os.getenv("TWITTER_EMAIL")
 TWITTER_PASSWORD = os.getenv("TWITTER_PASSWORD")
-USERNAME = os.getenv("USERNAME")
+USERNAME = os.getenv("USER_NAME")
 
 
 class InternetSpeedTwitterBot:
@@ -66,7 +66,7 @@ class InternetSpeedTwitterBot:
         username = self.driver.find_element(By.XPATH,
                                             '//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[1]/div/div[2]/label/div/div[2]/div/input')
         if username:
-            username.send_keys('thronabyte') #this line check if the username is required, you should put yours. YES
+            username.send_keys(USERNAME) #this line check if the username is required, you should put yours. YES
             username.send_keys(Keys.ENTER)
         time.sleep(5)
 
