@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Rating</title>
+    <!-- Add some basic styling -->
+    <style>
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <form action="{{ url_for('edit') }}" method="POST">
+        <h1>Book Name: {{ book.title }}</h1>
+        <p>Current Rating: {{ book.rating }}</p>
+        
+        <!-- Hidden field to store book ID -->
+        <input hidden="hidden" name="id" value="{{ book.id }}">
+        
+        <!-- Rating input field -->
+        <input name="rating" type="text" placeholder="New Rating">
+        
+        <!-- Display an error message if present -->
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+        
+        <!-- Submit button -->
+        <button type="submit">Change Rating</button>
+    </form>
+</body>
+</html>
