@@ -1,0 +1,17 @@
+<div class="pagination">
+    {% if movies.has_prev %}
+        <a href="{{ url_for('home', page=movies.prev_num) }}">Previous</a>
+    {% endif %}
+
+    {% for page in movies.iter_pages(left_edge=1, right_edge=1, left_current=2, right_current=2) %}
+        {% if page %}
+            <a href="{{ url_for('home', page=page) }}" {% if page == movies.page %}class="active"{% endif %}>{{ page }}</a>
+        {% else %}
+            <span>…</span>
+        {% endif %}
+    {% endfor %}
+
+    {% if movies.has_next %}
+        <a href="{{ url_for('home', page=movies.next_num) }}">Next</a>
+    {% endif %}
+</div>
