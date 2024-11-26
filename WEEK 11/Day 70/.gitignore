@@ -1,26 +1,3 @@
-/bcrypt.txt
-/testing.py
-/test.py
-/WEEK 6/Day 38/.env
-/WEEK 5/Day 29/.env
-/WEEK 6/Day 37/.env
-/WEEK 6/Day 36/.env
-/WEEK 6/Day 39
-/WEEK 6/Day 40
-/WEEK 7/Day 46/.env
-/WEEK 7/Day 46/token.txt
-/WEEK 7/Day 47/.env
-/WEEK 8/Day 49/.env
-/WEEK 8/Day 50/.env
-/WEEK 8/Day 51/.env
-/WEEK 8/Day 52/.env
-WEEK 8/Day 53/.env
-WEEK 9/Day 60/html-forms/.env
-WEEK 9/Day 63/instance
-WEEK 9/Day 63/.env
-WEEK 9/Day 64/.env
-WEEK 10/Day 69/.env
-
 # This is a gitignore file. Folders and file types in here will not
 # be added to version control and will not be uploaded to Github.
 # For example we ignore the hidden files from Pycharm and VS Code.
@@ -191,3 +168,5 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# Procfile
+Procfile
